@@ -43,6 +43,8 @@ p {
 
 /* Header */
 .header {
+    border-bottom: 1px solid #ECECEC;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -315,7 +317,6 @@ footer-contacts-item:not(:last-child) {
     flex-basis: calc((100% - 90px) / 3);
     margin-top: 30px;
     margin-left: 30px;
-    border: 1px solid #EEEEEE;
 
     /*margin-right: 30px;
     margin-botton: 30px;*/
@@ -335,9 +336,11 @@ footer-contacts-item:not(:last-child) {
 }
 .case-content {
     padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
 }
 .case-title {
-    margin: 20px auto 4px 24px;
+    margin-bottom: 4px;
 
     font-weight: 700;
     font-size: 18px;
@@ -347,8 +350,6 @@ footer-contacts-item:not(:last-child) {
 }
 
 .cases.list .case-type {
-    margin: 0 auto 20px 24px;
-
     font-size: 16px;
     line-height: 1.88;
 }
