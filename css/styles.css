@@ -8,6 +8,8 @@
 }
 
 body {
+    margin: 0;
+
     background-color: var(--primary-bgr-color);
     color: var(--title-color);
 
@@ -17,15 +19,28 @@ body {
     
 }
 h1, h2, h3, h4 { 
+    margin: 0;
     color: var(--title-color);
 }
 p {
+    margin: 0;
     color: var(--text-color);
+}
+.container {
+    display: flex;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 /* Header */
 .header {
     font-weight: 500;
@@ -33,10 +48,15 @@ p {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-
+.header .container {
+    align-items: center;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+}
 .logo {
     color: var(--title-color);
-
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -47,12 +67,35 @@ p {
 .logo-accent {
     color: var(--accent-color);
 }
+.header .logo {
+    margin-right: 93px;
+}
+.sait-nav {
+    display: flex;
+}
+.sait-nav-item:not(:last-child) {
+    margin-right: 50px;
+}
 .sait-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--title-color);
     text-decoration: none;
 }
 .sait-nav .link.current {
     color: var(--accent-color);
+}
+.header .contacts {
+
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-item:not(:last-child) {
+    margin-right: 50px;
+
 }
 .contacts-link {
     color: var(--text-color);
@@ -70,38 +113,59 @@ p {
 }
 
 /*Hero, footer */
+
 .hero, .footer {
     background-color: var(--footer-brg-color);
 }
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: center;
+}
 .hero-title {
+    margin: 0 auto 30px auto;
+    max-width: 696px;
+
     color: var(--primery-bgr-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 .hero-button {
+    padding: 10px 32px;
+    border: 0;
+    border-radius: 4px;
+    
     color: var(--primery-bgr-color);
     background-color: var(--accent-color);
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
-
-.footer > .logo {
+.footer-box {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer .logo {
+    margin-bottom: 20px;
+    
     color: var(--primery-bgr-color);
 }
 .footer-contacts {
     font-size: 14px;
     line-height: 1.71;
+}
+footer-contacts-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 .contacts-link.adds {
     color: var(--primery-bgr-color);
@@ -109,6 +173,8 @@ p {
 
 /*Main*/
 .section-title {
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -128,57 +194,151 @@ p {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
 /*Features */
+.features {
+    justify-content: center;
+    padding-top: 94px;
+}
+.features-list {
+    display: flex;
+
+}
+
+.feature-item:not(:last-child) {
+    margin-right: 30px;
+}
 .feature-title {
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
 .feature-description {
+
     font-size: 14px;
     line-height: 1.71;
 }
 
-/*Services*/
+/*Services, employees*/
+.services, .employees {
+    flex-direction: column;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.services-list, .employees-list {
+    display: flex;
+}
+.service:not(:last-child) {
+    margin-right: 30px;
 
+}
 
-/*employees*/
-.employees {
+.section-employees {
     background-color: var(--secondary-bgr-color);
 }
 .employee {
     background-color: var(--primery-bgr-color);
     text-align: center;
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    
 }
-.employee-name .employee-position {
+.employee:not(:last-child) {
+    margin-right: 30px;
+}
+.employee-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.employee-name, .employee-position {
     font-size: 16px;
     line-height: 1.19;
     
 }
 .employee-name {
+    margin-bottom: 10px;
+
     font-weight: 500;
 }
 /*Portfolio*/
+.portfolio {    
+    flex-direction: column;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.portfolio-btn-list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.portfolio-btn-item:not(:last-child) {
+    margin-right: 8px;
+}
 .portfolio-button {
+    padding: 6px 22px;
+    border: 0;
+    border-radius: 4px;
+
     color: var(--title-color);
     background-color: var(--secondary-bgr-color);
-    font: inherit;
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    letter-spacing: inherit;
+    letter-spacing: 0.03em;
+
     cursor: pointer;
+ 
 }
+
 .portfolio-button:hover,
 .portfolio-button:focus {
     color: var(--primery-bgr-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.cases {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    }
+.case-item {
+    box-sizing: border-box;
+    flex-basis: calc((100% - 90px) / 3);
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 1px solid #EEEEEE;
+
+    /*margin-right: 30px;
+    margin-botton: 30px;*/
+}
+/*.case-item:nth-child(3n) {
+    margin-right: 0;
+}
+.case-item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}*/
 .case-link {
     text-decoration: none;
 }
+.case-item img {
+    display: block;
+    max-width: 100%;
+}
+.case-content {
+    padding: 20px 24px;
+}
 .case-title {
+    margin: 20px auto 4px 24px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -187,6 +347,8 @@ p {
 }
 
 .cases.list .case-type {
+    margin: 0 auto 20px 24px;
+
     font-size: 16px;
     line-height: 1.88;
 }
