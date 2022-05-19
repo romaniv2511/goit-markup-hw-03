@@ -8,13 +8,11 @@
 }
 
 body {
-    margin: 0;
 
     background-color: var(--primary-bgr-color);
     color: var(--title-color);
-
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     letter-spacing: 0.03em;
     
 }
@@ -26,8 +24,12 @@ p {
     margin: 0;
     color: var(--text-color);
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .container {
-    display: flex;
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -51,6 +53,7 @@ p {
     letter-spacing: 0.02em;
 }
 .header .container {
+    display: flex;
     align-items: center;
 }
 .main-nav {
@@ -122,7 +125,7 @@ p {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-
+    font-size: 14px;
     text-align: center;
 }
 .hero-title {
@@ -158,15 +161,17 @@ p {
     padding-bottom: 60px;
 }
 .footer .logo {
-    margin-bottom: 20px;
+
     
     color: var(--primery-bgr-color);
 }
 .footer-contacts {
+    margin-top: 20px;
+
     font-size: 14px;
     line-height: 1.71;
 }
-footer-contacts-item:not(:last-child) {
+.footer-contacts-item:not(:last-child) {
     margin-bottom: 9px;
 }
 .contacts-link.adds {
@@ -199,14 +204,11 @@ footer-contacts-item:not(:last-child) {
 
 /*Features */
 .features {
-    justify-content: center;
     padding-top: 94px;
 }
 .features-list {
     display: flex;
-
 }
-
 .feature-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -219,14 +221,11 @@ footer-contacts-item:not(:last-child) {
     text-transform: uppercase;
 }
 .feature-description {
-
-    font-size: 14px;
     line-height: 1.71;
 }
 
 /*Services, employees*/
 .services, .employees {
-    flex-direction: column;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -235,9 +234,7 @@ footer-contacts-item:not(:last-child) {
 }
 .service:not(:last-child) {
     margin-right: 30px;
-
 }
-
 .section-employees {
     background-color: var(--secondary-bgr-color);
 }
@@ -270,14 +267,12 @@ footer-contacts-item:not(:last-child) {
 }
 /*Portfolio*/
 .portfolio {    
-    flex-direction: column;
     padding-top: 94px;
     padding-bottom: 94px;
 }
 .portfolio-btn-list {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     margin-bottom: 50px;
 }
 .portfolio-btn-item:not(:last-child) {
@@ -313,7 +308,6 @@ footer-contacts-item:not(:last-child) {
     margin-left: -30px;
     }
 .case-item {
-    box-sizing: border-box;
     flex-basis: calc((100% - 90px) / 3);
     margin-top: 30px;
     margin-left: 30px;
@@ -329,10 +323,6 @@ footer-contacts-item:not(:last-child) {
 }*/
 .case-link {
     text-decoration: none;
-}
-.case-item img {
-    display: block;
-    max-width: 100%;
 }
 .case-content {
     padding: 20px 24px;
@@ -354,3 +344,23 @@ footer-contacts-item:not(:last-child) {
     line-height: 1.88;
 }
 
+.box::before {
+    content: 'Это текст в ::before';
+    font-size: 40px;
+    color: orange;
+}
+
+.box::after {
+    content: 'Это текст в ::after';
+    font-size: 30px;
+    color: teal;
+}
+/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
+.box:hover::before {
+    color: green;
+}
+
+/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
+.box:hover::after {
+    color: tomato;
+}
