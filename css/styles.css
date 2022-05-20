@@ -48,7 +48,6 @@ img {
     border-bottom: 1px solid #ECECEC;
 
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
@@ -125,7 +124,7 @@ img {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    font-size: 14px;
+
     text-align: center;
 }
 .hero-title {
@@ -155,8 +154,7 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
-.footer-box {
-    flex-direction: column;
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -168,7 +166,6 @@ img {
 .footer-contacts {
     margin-top: 20px;
 
-    font-size: 14px;
     line-height: 1.71;
 }
 .footer-contacts-item:not(:last-child) {
@@ -235,7 +232,7 @@ img {
 .service:not(:last-child) {
     margin-right: 30px;
 }
-.section-employees {
+.employees {
     background-color: var(--secondary-bgr-color);
 }
 .employee {
@@ -342,25 +339,4 @@ img {
 .cases.list .case-type {
     font-size: 16px;
     line-height: 1.88;
-}
-
-.box::before {
-    content: 'Это текст в ::before';
-    font-size: 40px;
-    color: orange;
-}
-
-.box::after {
-    content: 'Это текст в ::after';
-    font-size: 30px;
-    color: teal;
-}
-/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
-.box:hover::before {
-    color: green;
-}
-
-/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
-.box:hover::after {
-    color: tomato;
 }
